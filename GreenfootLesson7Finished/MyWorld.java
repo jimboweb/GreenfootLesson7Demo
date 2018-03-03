@@ -59,6 +59,9 @@ public class MyWorld extends World
     
     public void act(){
         showText("Score = " + score, 100, 20);
+        if(getObjects(Pizza.class).isEmpty()){
+            Greenfoot.setWorld(new EndGameScreen(Color.GREEN, Color.BLUE, "YOU WON"));
+        }
     }
     
     public void increaseScore(){

@@ -22,6 +22,8 @@ public class Bomb extends Actor
         if(collidingCar!=null){
             getWorld().removeObject(collidingCar);
             setImage("skull.png");
+            Greenfoot.delay(20);
+            Greenfoot.setWorld(new EndGameScreen());
         }
     }
     
